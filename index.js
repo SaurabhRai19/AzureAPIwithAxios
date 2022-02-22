@@ -1,6 +1,6 @@
-const axios = require("axios");
+let axios = require("axios");
 let fs = require("fs");
-var writeableStream = fs.createWriteStream("output.json");
+let writeableStream = fs.createWriteStream("output.json");
 require("dotenv").config();
 
 async function azureApiCall() {
