@@ -28,6 +28,9 @@ async function azureApiCall() {
     },
   });
   let responsedata = request.data;
+  //Print Names
+  let arrOfObj=responsedata.value;
+  arrOfObj.forEach(obj => console.log(obj.name));
   const jsonFormat = JSON.stringify(responsedata, null, 2);
   console.log(jsonFormat);
   writeableStream.write(jsonFormat, "UTF8");
